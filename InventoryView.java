@@ -75,7 +75,8 @@ class InventoryView extends JPanel implements ActionListener
 	public void actionPerformed(ActionEvent e)
 	{	//setVisible(false);
 		String str = tf.getText();	
-		
+		str = ESAPI.encoder().encodeForSQL( new OracleCodec(),  str);
+
 		String query;
 		String str1=null;
 				
