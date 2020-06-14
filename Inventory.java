@@ -158,6 +158,7 @@ class Inventory extends JFrame implements ActionListener
                 String sstone_wt = stone_wt.getText();
                 String sstone_number = stone_number.getText();
        	        String sdetails = details.getText();
+		sdetails = ESAPI.encoder().encodeForSQL( new OracleCodec(), sdetails );
 
 	 	String query =" INSERT INTO Inventory(Style_ID,Vendor_ID,In_Date,Gold,Gold_wt,Stone_Type,Stone_Weight,Stone_numbers,Details) VALUES ('"+sstyle_id+"','"+sVendor_id+"','"+sin_date+"','"+sgold_cr+"','"+sgold_wt+"','"+sstone_type+"','"+sstone_wt+"','"+sstone_number+"','"+sdetails+"')";
                 //System.out.println("Query ="+query);
