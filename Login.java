@@ -107,7 +107,7 @@ class Login extends JFrame implements ActionListener
 		{
 		
 			String SUser = User.getText();
-			SUser = esapiEncoder.encodeForSQL(new OracleCodec(), SUser);
+			SUser = ESAPI.encoder().encodeForSQL( new OracleCodec(),  SUser);
 			String SPassword = Password.getText();
 			String SType = com;
 			String str,str1;
