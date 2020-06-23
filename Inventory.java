@@ -168,6 +168,7 @@ class Inventory extends JFrame implements ActionListener
 		        con = DriverManager.getConnection("jdbc:odbc:JMS");
 			stmt = con.createStatement();
 			int result = stmt.executeUpdate ( query );
+			result -= 1;
 		}
 		catch(Exception ae)
               	{
